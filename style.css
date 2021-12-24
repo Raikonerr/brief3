@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-padding-top:2rem;
+  scroll-behavior: smooth;
+  list-style:none ;
+  text-decoration: none;
+  font-family:"Poppins", sans-serif;
+}
+:root{
+  --main-color: #3aebf8;
+  --second-color: #000000;
+  --third-color:#e7E7E7;
+  --text-color: #353535;
+  --gradient: linear-gradient(#3aebf8,#cddedf);
+}
+body{
+    background-attachment: fixed;
+    background-color: rgba(210, 247, 247, 0.781);
+    background-size: auto;
+}
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: url(pic/backheader.jpeg) no-repeat ;
+  background-size:cover;
+
+}
+
+.header .menu {
+  width: 100%;
+  background-color: rgba(192, 235, 232, 0.219);
+  border-radius: 10px;
+}
+.header .menu ul {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px 100px;
+}
+.header .menu ul li {
+  padding: 0px 5px;
+  margin: 0 10px; 
+}
+.header .menu ul li a{
+  display:inline-block;
+  color: var(--text-color);
+  font-weight:500;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.header .menu ul li a:hover{
+  color: #3aebf8;
+}
+.header .menu .logo a img {
+  width: 200px;
+  height: 80px;
+  margin-left: -350px;
+}
+.loader{
+  position: absolute;
+  z-index: 9999999;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+
+.header .headcontent{
+  width: fit-content;
+  margin: 100px auto;
+  align-self: center;
+  justify-self: center;
+  color: rgba(35, 35, 35, 0.637);
+
+}
+.header .headcontent h2{
+  font-size:60px;
+  margin-bottom: 20px;
+  text-align: center;
+  color:var(--second-color);
+}
+.header .headcontent h4{
+  font-size:30px;
+  text-align: center;
+  margin-top: 40px;
+  color: var(--second-color);
+}
+.header .headcontent h1{
+  font-size:70px;
+  text-align: center;
+  margin-top:200px;
+  color: var(--main-color)
+}
+
+
+main .section {
+  height: fit-content;
+  width: 100%;
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  margin:auto;
+}
+
+main .section .imgs{
+
+  width: 50%;
+  height: 400px;
+  background: url("pic/blue-elegant-car-illustration_173474-93.jpg") no-repeat ;
+
+}
+
+main .section .text{
+  width:40%;
+  height: 400px;
+  background-color: white;
+}
+main .section .text h1 {
+  font-size: 36px;
+  text-align: center;
+}
+main .section .text .rent{
+  width: 100%;
+  height: fit-content;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+main .section .text .rent1{
+  width: 100%;
+  height: fit-content;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30PX;
+}
+main .section .text .rent1 img{
+  width: 100px;
+  height: 100px;
+  display:flex;
+}
+main .section .text .rent2{
+  width: 100%;
+  height: fit-content;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+main .section .text .rent2 img{
+  width: 100px;
+  height: 100px;
+  display:flex;
+  margin-top: 10px;
+}
+main .section .text .rent .rent11{
+  width:60%;
+  flex-direction: column;
+  display:flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+
+main .section .text .rent .rent12{
+  width:60%;
+  flex-direction: column;
+  display:flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+main .hiw {
+  width: 80%;
+  display: flex ;
+  justify-content: space-between;
+  background-color: rgb(177, 219, 230);
+  margin:auto;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+main .hiw .hi{
+  margin-top: 60px;
+  display: flex;
+  justify-content:space-around;
+  flex: column;
+  text-align: center;
+  width: 100%;
+}
+main .hiw h1{
+  text-align: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+main .hiw .hi{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+ main .hiw .hi h6{
+   font-size:18px;
+ }
+ main .hiw .hi p{
+   font-size: 12px;
+ }
+ main .hiw .hi img{
+   width: 40px;
+ }
+ 
+ 
+ main .say .op img{
+   width: 90px;
+   height: 90px;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   border-radius:40px ;
+   margin: auto;
+
+ }
+ main .say H1{
+   text-align: center;
+   justify-content: center;
+   width: 100%;
+   margin-bottom: 10px;
+   margin-top: 30px;
+ }
+ main .say .op {
+   width:100%;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   justify-content: space-around;
+   text-align: center;
+   border: 20px white solid;
+ }
+ main .say .op h6{
+   font-size: 18px;
+   text-align: center;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+ main .say .op p{
+   text-align:justify;
+ }
+
+
+ footer {
+   background-color:var(--main-color);
+  color: black;
+}
+.footelement {
+  padding-right: 5%;
+  padding-left: 5%;
+  flex: 1;
+}
+.footer {
+  margin: 0px;
+  padding: 2%;
+  display: flex;
+  padding-bottom: 100px;
+  justify-content: space-evenly;
+  font-weight: 300;
+
+}
+
+ 
+   
+ 
