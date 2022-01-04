@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reservation.css">
+    <title>Rentmenow</title>
+</head>
+<body onload="loader()">
+    <div class="loader">
+        <img src="pic/loader.gif" alt="#"/>
+    </div>
+    <!--salat loader-->
+    <!--db header-->
+    <header class="header">
+        <nav class="menu">
+            <ul>
+                <li class="logo"><a href="index.html"><img src="pic/logo.png" alt="mainlogo"></a></li>
+
+            </ul>
+            <ul>   
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="reservation.html">Reservation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-container">
+            <h2>Reservation</h2>
+        </div>
+        </header>
+        <main>
+            <div class="ness">
+                <div class="nessA">
+                    <img src="pic/citadine/cit6.png" alt="">
+                 </div>   
+                 <div class="nessB">
+                     <fieldset class="gb">
+                        
+                        <legend >gear box</legend>
+                            <select name="gearbox" id="gearbox" style="color: rgba(0, 0, 0, 0.938);">
+                                <option>--choose--</option>
+                                <option value="manual">manual</option>
+                                <option value="automatic">automatic</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                    </fieldset>
+                    <fieldset class="t">
+                        <legend>Type</legend>
+                            <select name="type" id="type" style="color: rgba(0, 0, 0, 0.938);">
+                             <option>-choose--</option>
+                             <option value="Moto">Moto</option>
+                             <option value="Citadine">Citadine</option>
+                             <option value="Compact">Compact</option>
+                             <option value="Berline">Berline</option>
+                             <option value="Utility">Utility</option>
+                             <option value="Construction">Construction machine</option>
+                             <option value="Trucks">Trucks</option> 
+                            </select>
+                    </fieldset>
+                    <fieldset class="f">
+                        <legend>
+                            Fuel     
+                        </legend>
+                            <select name="fuel" id="fuel" style="color: rgba(0, 0, 0, 0.938);">
+                                <option value="none">--choose--</option>
+                                <option value="Electric">Electric</option>
+                                <option value="Hybrid">Hybrid</option>
+                                <option value="Gasoline">Gasoline</option>
+                                <option value="Diesel">Diesel</option>
+                            </select>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Days</legend>
+                        <input type="number" name="days" id="days" minlength="1">
+                    </fieldset>
+                       
+                        
+                
+    
+                 </div>
+                 <input type="submit" value="submit"  id="submit"  class="sub">
+            </div>
+
+        </main>
+        <footer>
+            <section>
+                <div class="footer">
+    
+                    <div class="footelement">
+                        <h1>RENT ME NOW</h1>
+                        <ul style="padding: 0ch;">
+                            <li><a href="#">HOME </a></li>
+                            <li><a href="#">GALLERY</a></li>
+                            <li><a href="#">RESERVATION</a></li>
+                            <li><a href="#">CONTACTS</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footelement">
+                        <h1>CALL</h1>
+                        <ul style="padding: 0ch;">
+                            <li><p>+212-661-001234</p></li>
+                            <li><p>+212-661-000000</p></li>
+    
+                        </ul>
+                    </div>
+    
+                    <div class="footelement">
+                        <h1>E-MAIL</h1>
+                        <ul style="padding: 0ch;">
+                            <li><a href="#">RentMeNow@gmail.com</a></li>
+                            <li><a href="#">RentMeNowSuuport@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="footelement">
+                        <h1>VISIT US</h1>
+                        <ul style="padding: 0ch;">
+                            <li><p>20299 SAFI <br>MOROCCO </p></li>
+    
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+        <script src="index.js"></script>
+        </body>
+        </html>

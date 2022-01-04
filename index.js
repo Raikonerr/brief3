@@ -4,3 +4,182 @@ function loader() {
     document.querySelector(".header").style.display = "block";
     document.querySelector(".section").style.display = "block";
   }
+  function contact() {
+    //                
+    let name = document.getElementById("Name").value;
+    var mail = document.getElementById("Mail").value;
+    let subject = document.getElementById("Subject").value;
+    var message = document.getElementById("Message").value;
+    
+  
+    if (name == "" || name.length < 3) {
+      alert("enter your Name");
+      return false;
+    }if (mail == "") {
+      alert("enter your Email");
+      return false;
+    }
+    if (subject == "") {
+      alert("enter your Subject");
+      return false;
+    }
+    if (message == "" || message.length < 10) {
+      alert("enter your Message");
+      return false;
+    }
+
+    alert(name + "   " + mail +"  " + subject +"  " + message);
+  }
+  // booking script
+    // variables of the select tags 
+let gearBoxes = document.querySelector("#gearbox"),
+type = document.querySelector("#type"),
+fuel = document.querySelector("#fuel"),
+days = document.querySelector("#days"),
+submit = document.querySelector("#submit");
+
+// variables of the types input 
+let mType = ["Citadine", "Compact", "Utility", "Construction"],
+aType = ["Berline", "Camion"],
+oType = "Moto";
+
+
+// variables of the fuel input 
+let electric = ["Moto", "Citadine"],
+hybrid = ["Citadine", "Compact", "Berline"],
+gasoline = ["Moto", "Citadine", "Berline", "Compact", "Construction"],
+diesel = ["Citadine", "Compact", "Berline", "Utility", "Construction", "Trucks"];
+
+
+
+// if the user select one of the element on the gearBoxes select this script well start working
+gearBoxes.addEventListener("change",() => {
+if(gearBoxes.value == "manual") {
+    //document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+    type.innerHTML = `<option value="none">--Choose--</option>`;
+    mType.forEach(m => {
+        type.innerHTML += `<option value="${m}">${m}</option>`;
+    });
+
+} else if(gearBoxes.value == "automatic") {
+    // document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+    type.innerHTML = `<option value="none">--Choose--</option>`;
+    aType.forEach(a => {
+        type.innerHTML += `<option value="${a}">${a}</option>`;
+    });
+
+} else if(gearBoxes.value == "moto") {
+    // document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+    type.innerHTML = `<option value="none">--Choose--</option>`;
+    type.innerHTML += `<option value="${oType}">${oType}</option>`;
+
+} else {
+    // document.querySelectorAll(".re-steps")[1].classList.remove("on-re-steps");
+    // document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
+    // document.querySelectorAll(".re-steps")[3].classList.remove("on-re-steps");
+    type.innerHTML = `<option value="none">--Choose--</option>`;
+    fuel.innerHTML = `<option value="none">--Choose--</option>`;
+}
+});
+
+
+
+// if the user select one of the element on the types select this script well continue working
+type.addEventListener("change",() => {
+fuel.innerHTML = `<option value="none">--Choose--</option>`;
+if (electric.includes(type.value)) {
+    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    fuel.innerHTML += `<option value="Electric">Electric</option>`;
+
+}
+if (hybrid.includes(type.value)) {
+    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    fuel.innerHTML += `<option value="Hybrid">Hybrid</option>`;
+
+}
+if (gasoline.includes(type.value)) {
+    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    fuel.innerHTML += `<option value="Gasoline">Gasoline</option>`;
+
+} 
+if (diesel.includes(type.value)) {
+    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    fuel.innerHTML += `<option value="Diesel">Diesel</option>`;
+
+}
+if (type.value == "none") {
+    // document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
+    fuel.innerHTML = `<option value="none">--Choose--</option>`;
+}
+});
+
+
+// if the user select one of the element on the fuel select this script well continue working
+fuel.addEventListener("change", () => {
+if (fuel.value !== "none") {
+    // document.querySelectorAll(".re-steps")[3].classList.add("on-re-steps");
+    days.focus();
+
+} else {
+    // document.querySelectorAll(".re-steps")[3].classList.remove("on-re-steps");
+    days.value = "";
+}
+});
+
+
+// when the user click the submit button the calculation will start.
+submit.addEventListener("click", (e) => {
+e.preventDefault();
+let result = 0,
+    typePrix = 0,
+    fuelPrix = 0;
+switch (fuel.value) {
+    case "Electric":
+        fuelPrix = 1.05;
+        break;
+    case "Hybrid":
+        fuelPrix = 1.09;
+        break;
+    case "Gasoline":
+        fuelPrix = 1.14;
+        break;
+    case "Diesel":
+        fuelPrix = 1.21;
+        break;
+}
+
+switch (type.value) {
+    case "Moto":
+        typePrix = 10;
+        break;
+    case "Citadine":
+        typePrix = 12;
+        break;
+    case "Compact":
+        typePrix = 14;
+        break;
+    case "Berline":
+        typePrix = 20;
+        break;
+    case "Utilitaire":
+        typePrix = 16;
+        break;
+    case "Engin_de_Chantier":
+        typePrix = 900;
+        break;
+    case "Camion":
+        typePrix = 250;
+        break;
+}
+
+// store the prise on the result variable depending on the gearBoxes.
+if(gearBoxes.value = "automatique") {
+    result = (typePrix * days.value) * fuelPrix * 1.19;
+} else {
+    result = (typePrix * days.value) * fuelPrix;
+}
+
+// display the result.
+window.alert(Math.round(result) + "$");
+})
+  
