@@ -40,7 +40,7 @@ submit = document.querySelector("#submit");
 
 // variables of the types input 
 let mType = ["Citadine", "Compact", "Utility", "Construction"],
-aType = ["Berline", "Camion"],
+aType = ["Berline", "Truck"],
 oType = "Moto";
 
 
@@ -48,7 +48,7 @@ oType = "Moto";
 let electric = ["Moto", "Citadine"],
 hybrid = ["Citadine", "Compact", "Berline"],
 gasoline = ["Moto", "Citadine", "Berline", "Compact", "Construction"],
-diesel = ["Citadine", "Compact", "Berline", "Utility", "Construction", "Trucks"];
+Diesel = ["Citadine", "Compact", "Berline", "Utility", "Construction", "Truck"];
 
 
 
@@ -102,7 +102,7 @@ if (gasoline.includes(type.value)) {
     fuel.innerHTML += `<option value="Gasoline">Gasoline</option>`;
 
 } 
-if (diesel.includes(type.value)) {
+if (Diesel.includes(type.value)) {
     // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
     fuel.innerHTML += `<option value="Diesel">Diesel</option>`;
 
@@ -131,55 +131,55 @@ if (fuel.value !== "none") {
 submit.addEventListener("click", (e) => {
 e.preventDefault();
 let result = 0,
-    typePrix = 0,
-    fuelPrix = 0;
+    typePrice = 0,
+    fuelPrice = 0;
 switch (fuel.value) {
     case "Electric":
-        fuelPrix = 1.05;
+        fuelPrice = 0.05;
         break;
     case "Hybrid":
-        fuelPrix = 1.09;
+        fuelPrice = 0.09;
         break;
     case "Gasoline":
-        fuelPrix = 1.14;
+        fuelPrice = 0.14;
         break;
     case "Diesel":
-        fuelPrix = 1.21;
+        fuelPrice = 0.21;
         break;
 }
 
 switch (type.value) {
     case "Moto":
-        typePrix = 10;
+        typePrice = 10;
         break;
     case "Citadine":
-        typePrix = 12;
+        typePrice = 12;
         break;
     case "Compact":
-        typePrix = 14;
+        typePrice = 14;
         break;
     case "Berline":
-        typePrix = 20;
+        typePrice = 20;
         break;
-    case "Utilitaire":
-        typePrix = 16;
+    case "Utility":
+        typePrice = 16;
         break;
-    case "Engin_de_Chantier":
-        typePrix = 900;
+    case "Construction":
+        typePrice = 900;
         break;
-    case "Camion":
-        typePrix = 250;
+    case "Truck":
+        typePrice = 250;
         break;
 }
 
 // store the prise on the result variable depending on the gearBoxes.
-if(gearBoxes.value = "automatique") {
-    result = (typePrix * days.value) * fuelPrix * 1.19;
+if(gearBoxes.value == "automatic") {
+    result = (typePrice * ( fuelPrice + 0.19)) * days.value;
 } else {
-    result = (typePrix * days.value) * fuelPrix;
+    result = (typePrice  * fuelPrice) * days.value;
 }
 
 // display the result.
-window.alert(Math.round(result) + "$");
+window.alert(parseFloat(result) + "€");
 })
   
