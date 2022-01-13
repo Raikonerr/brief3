@@ -20,7 +20,7 @@ body{
   display: flex;
   background-image: url("pic/28532.jpg");
 }
-}
+
 .header .header-container h2{
   color: #3aebf8;
   font-size: 60px;
@@ -31,6 +31,12 @@ body{
     justify-content: space-between;
     padding: 0 1px;
   }
+   .mob {
+    display: none;
+  }
+  header nav #nav-menu-mobil {
+    display: none;
+}
   .loader{
     position: absolute;
     z-index: 9999999;
@@ -74,11 +80,11 @@ body{
   .header .menu ul li a:hover{
     color: #3aebf8;
   }
-  .header .menu .logo a img {
+  .header .menu a img {
     width: 200px;
     height: 20px;
-    margin-left: -350px;
-  }
+    margin-top: 30px;
+  } 
   .header .header-container {
     width: 100%;
     height: 500px;
@@ -100,9 +106,13 @@ body{
   }
   main .ness{
     width: 100%;
-    height: 400px;
+    /* height: 400px; */
+    gap: 40px;
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
     display: flex;
-    flex-direction:row ;
+    flex-direction:column ;
     border-radius: 20px;
     border: #3aebf8 solid;
     background-color: black;
@@ -114,16 +124,16 @@ body{
   main .ness .nessB{
     width: 50%;
     display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
   }
   main .ness .nessB fieldset{
     background-color: white;
-    height: 200px;
+    /* height: 200px; */
     display: block;
-    margin-left: 2px;
-    margin-right: 2px;
-    padding-top: 0.35em;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
+  
+  padding: 20px;
     border: 2px groove (internal value);
     align-items: center;
   }
@@ -167,8 +177,7 @@ body{
   width: 100px;
   align-items: center;
   justify-content: center;
-  margin-top: 80px;
-  margin-bottom: 80px;
+
 
   }
   footer {
@@ -219,8 +228,7 @@ body{
   }
   .socials li{
     margin : 0 20px;
-    align-items: center;
-    justify-content: center;
+   
   }
   .socials a{
     text-decoration: none;
@@ -251,8 +259,198 @@ body{
     opacity: .7;
     font-weight: 500;
   }
-  @media screen and (max-width: 600px){
-    
-    
+  .footer-content .logof span{
+    font-size: 72px;
+    background: -webkit-linear-gradient(rgb(0, 0, 0), rgb(0, 255, 234));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
   }
+  .fal fa-bars{
+    display: none;
+  }
+  @media screen and (max-width: 600px){
+    body{
+      background-color: black;
+    }
+    .mob{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .mob i {
+      display:block;
+      width: 50px;
+      height: 9px;
+    }
+    header nav #nav-menu-mobil {
+      display: flex;
+      flex-direction: row;
+      padding: 20px 7px;
+      background: #262626;
+      position:absolute;
+      top: 10%;
+      left: 50%;
+      transform: rotateX(90deg) translateX(-51.5%);
+      transition:all linear 300ms;
+      z-index: 1;
+  }
+  header .menu-on #nav-menu-mobil {
+      transform: rotateX(0deg) translateX(-51.5%) ;
+  }
+
+  header nav #nav-menu-mobil .nav-item {
+      padding: 5px 10px;
+      margin: 0 7px;
+  }
+  header nav #nav-menu-mobil .nav-item a {
+      color: white;
+      font-weight: 600;
+  }
+    
+    .header .menu {
+      width: 100%;
+      background-color: #3aebf85b;
+      border-radius: 10px;
+      inset: 0% 0% 0% 90%;
+      flex-direction: column;
+    }
+    .header .menu ul {
+      width: 100%;
+      height: 90px;
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      align-items: center;
+      justify-content: space-around;
+      display: none;
+    }
+  
+    
+    .header .menu ul li a:hover{
+      color: #3aebf8;
+    }
+    .header .menu a img {
+      width: 100px;
+      height: 20px;
+      margin-bottom: 20px;
+    } 
+    .header .header-container {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .header .header-container h2{
+      color: #3aebf8;
+      font-size: 60px;
+      align-items: center;
+    }
+   
+   
+   
+  
+   
+    main{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 400px;
+    }
+    main .ness{
+      width: 100%;
+    
+      display: flex;
+      flex-direction:row ;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 20px;
+      border: #3aebf8 solid;
+      background-color: black;
+    }
+    main .ness .nessA{
+      width:50% ;
+      display: none;
+    }
+    main .ness .nessB{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    main .ness .nessB fieldset{
+      background-color: white;
+      
+      width: 300px;
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      border: 2px groove (internal value);
+      align-items: center;
+    }
+    main .ness .nessB fieldset {
+      margin-right: 10px;
+      background-color: black;
+    }
+    main .ness .nessB fieldset img{
+      width: 50px;
+      height: 50px;
+    }
+    main .ness .nessB fieldset legend{
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+    color: #3aebf8;
+    border: 5px solid;
+    border-radius: 10px;
+    }
+    main .ness .nessB fieldset legend input{
+      color: #3aebf8;
+      background-color: black;
+    border-style: groove;
+    border-radius: 20px;
+    height: 50px;
+    width: 100px;
+    margin-top: 20px;
+    margin-right:200;
+  
+    }
+footer{
+  display:flex;
+  flex-direction: column;
+  padding-top:150px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin:1rem 0 3rem 4rem;
+}
+.footer-bottom{
+  width: 100vw;
+  padding-top: 0px;
+}
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing:2px;
+  text-transform: capitalize;
+  margin-left:20px
+  }
+  
+}
+
+  
  

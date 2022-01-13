@@ -1,9 +1,34 @@
+let mobilMenu = () => {
+    document.querySelector("nav").classList.toggle("menu-on");
+}
+
+
+
+
+
+
 function loader() {
     document.querySelector(".loader").style.display = "none";
     document.querySelector(".loader").style.transition = "2s";
     document.querySelector(".header").style.display = "block";
     document.querySelector(".section").style.display = "block";
   }
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
   function contact() {
     //                
     let name = document.getElementById("Name").value;
@@ -135,16 +160,16 @@ let result = 0,
     fuelPrice = 0;
 switch (fuel.value) {
     case "Electric":
-        fuelPrice = 0.05;
+        fuelPrice = 1.05;
         break;
     case "Hybrid":
-        fuelPrice = 0.09;
+        fuelPrice = 1.09;
         break;
     case "Gasoline":
-        fuelPrice = 0.14;
+        fuelPrice = 1.14;
         break;
     case "Diesel":
-        fuelPrice = 0.21;
+        fuelPrice = 1.21;
         break;
 }
 
@@ -173,10 +198,10 @@ switch (type.value) {
 }
 
 // store the prise on the result variable depending on the gearBoxes.
-if(gearBoxes.value == "automatic") {
-    result = (typePrice * ( fuelPrice + 0.19)) * days.value;
+if(gearBoxes.value = "automatic") {
+    result = (typePrice * ( fuelPrice + 1.19)) * days.value;
 } else {
-    result = (typePrice  * fuelPrice) * days.value;
+    result = (typePrice  * fuelPrice ) * days.value;
 }
 
 // display the result.
