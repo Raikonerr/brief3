@@ -18,7 +18,7 @@
         <nav class="menu" style ="padding:0px 40px" >
         <div class="mob">
             <a href="index.html"><img src="pic/RentMeNow.png" alt="mainlogo"></a>
-            <i class="fas fa-bars" onclick="mobilMenu()"></i>
+            <img src="pic/bar.svg" onclick="mobilMenu()"></img>
             <ul id="nav-menu-mobil">
                 <li class="nav-item"><a href="index.html">Home</a></li>
                 <li class="nav-item"><a href="gallery.html">Gallery</a></li>
@@ -26,9 +26,9 @@
                 <li class="nav-item nav-focus"><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-            
+          <a class ="logom" href="index.html"><img src="pic/RentMeNow.png"></a>
             <ul>   
-                <li></li>
+             
                 <li><a href="index.html">Home</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="reservation.html">Reservation</a></li>
@@ -44,23 +44,23 @@
                         <h3>Contact Us</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                         <label class="form">
-                            <input type="text" class="form-control" name="Name" id="Name" required>
-                            <span>Your Name</span>
+                            <input type="text" class="form-control" name="Name" id="Name" placeholder="Name"  required>
+                            <!-- <span>Your Name</span> -->
                             <span class="border"></span>
                         </label>
                         <label class="form">
-                            <input type="text" class="form-control" name="Mail" id="Mail">
-                            <span for="">Your Mail</span>
+                            <input type="text" class="form-control" name="Mail" id="Mail"  placeholder="Email">
+                            <!-- <span for="">Your Mail</span> -->
                             <span class="border"></span>
                         </label>
                         <label class="form">
-                            <input type="text" class="form-control" name="Subject" id="Subject">
-                            <span for="">Subject</span>
+                            <input type="text" class="form-control" name="Subject" id="Subject" placeholder="Subject">
+                            <!-- <span for="">Subject</span> -->
                             <span class="border"></span>
                         </label>
                         <label class="form" >
-                            <textarea name="Message" id="Message" class="form-control" ></textarea>
-                            <span for="">Your Message</span>
+                            <textarea name="Message" id="Message" class="form-control"  placeholder="Your message"></textarea>
+                            <!-- <span for="">Your Message</span> -->
                             <span class="border"></span>
                         </label>
                         <button    value="Send Message" id="Sumbit"  onclick=" alert(contact())">Submit 

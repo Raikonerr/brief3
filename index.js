@@ -29,6 +29,11 @@ window.onclick = function(event) {
     }
   }
 }
+
+
+
+
+
   function contact() {
     //                
     let name = document.getElementById("Name").value;
@@ -80,28 +85,26 @@ Diesel = ["Citadine", "Compact", "Berline", "Utility", "Construction", "Truck"];
 // if the user select one of the element on the gearBoxes select this script well start working
 gearBoxes.addEventListener("change",() => {
 if(gearBoxes.value == "manual") {
-    //document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+  
     type.innerHTML = `<option value="none">--Choose--</option>`;
     mType.forEach(m => {
         type.innerHTML += `<option value="${m}">${m}</option>`;
     });
 
 } else if(gearBoxes.value == "automatic") {
-    // document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+   
     type.innerHTML = `<option value="none">--Choose--</option>`;
     aType.forEach(a => {
         type.innerHTML += `<option value="${a}">${a}</option>`;
     });
 
 } else if(gearBoxes.value == "moto") {
-    // document.querySelectorAll(".re-steps")[1].classList.add("on-re-steps");
+    
     type.innerHTML = `<option value="none">--Choose--</option>`;
     type.innerHTML += `<option value="${oType}">${oType}</option>`;
 
 } else {
-    // document.querySelectorAll(".re-steps")[1].classList.remove("on-re-steps");
-    // document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
-    // document.querySelectorAll(".re-steps")[3].classList.remove("on-re-steps");
+  
     type.innerHTML = `<option value="none">--Choose--</option>`;
     fuel.innerHTML = `<option value="none">--Choose--</option>`;
 }
@@ -113,27 +116,27 @@ if(gearBoxes.value == "manual") {
 type.addEventListener("change",() => {
 fuel.innerHTML = `<option value="none">--Choose--</option>`;
 if (electric.includes(type.value)) {
-    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    
     fuel.innerHTML += `<option value="Electric">Electric</option>`;
 
 }
 if (hybrid.includes(type.value)) {
-    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    
     fuel.innerHTML += `<option value="Hybrid">Hybrid</option>`;
 
 }
 if (gasoline.includes(type.value)) {
-    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+    
     fuel.innerHTML += `<option value="Gasoline">Gasoline</option>`;
 
 } 
 if (Diesel.includes(type.value)) {
-    // document.querySelectorAll(".re-steps")[2].classList.add("on-re-steps");
+   
     fuel.innerHTML += `<option value="Diesel">Diesel</option>`;
 
 }
 if (type.value == "none") {
-    // document.querySelectorAll(".re-steps")[2].classList.remove("on-re-steps");
+  
     fuel.innerHTML = `<option value="none">--Choose--</option>`;
 }
 });
@@ -142,11 +145,11 @@ if (type.value == "none") {
 // if the user select one of the element on the fuel select this script well continue working
 fuel.addEventListener("change", () => {
 if (fuel.value !== "none") {
-    // document.querySelectorAll(".re-steps")[3].classList.add("on-re-steps");
+
     days.focus();
 
 } else {
-    // document.querySelectorAll(".re-steps")[3].classList.remove("on-re-steps");
+   
     days.value = "";
 }
 });
